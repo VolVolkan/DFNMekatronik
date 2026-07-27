@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tüm Referanslarımız | DFN Mekatronik</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animasyon Kütüphanesi -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Logoları Kutu İçinde Büyüten Ek CSS -->
+    <style>
+        .ref-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 10px !important; /* Kutunun iç boşluğunu azaltarak logolara yer açar */
+            min-height: 180px; /* Kutuların eşit durmasını sağlar */
+        }
+
+        .ref-box img {
+            max-width: 90% !important; /* Logoyu enlemesine büyütür */
+            max-height: 110px !important; /* Logoyu boylamasına büyütür */
+            width: auto !important;
+            height: auto !important;
+            object-fit: contain !important; /* Logonun oranının bozulmasını engeller */
+            margin-bottom: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .ref-box:hover img {
+            transform: scale(1.08); /* Üzerine gelince hafif büyüme efekti */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Üst Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <a href="mailto:turan@dfnmekatronik.com"><i class="fa-solid fa-envelope"></i> turan@dfnmekatronik.com</a>
+                <a href="tel:+905063107684"><i class="fa-solid fa-phone"></i> 0 506 310 76 84</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Logo -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html"><img src="pictures/logobeyaz.webp" alt="DFN Mekatronik Logo"></a>
+            </div>
+            <div class="header-airflow">
+                <i class="fa-solid fa-wind"></i>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navList">
+                    <li><a href="index.html#home">AnaSayfa</a></li>
+                    <li><a href="index.html#about">Kurumsal</a></li>
+                    <li><a href="index.html#services">Hizmetlerimiz</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="index.html#references">Referanslar</a></li>
+
+                    <li><a href="index.html#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Tüm Referanslar Grid Bölümü -->
+    <section class="references-section" style="padding: 60px 20px;">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up"><i class="fa-solid fa-fan spin-fan"></i> Bizi Tercih Eden Değerli İş Ortaklarımız</h2>
+            <p class="text-center" style="margin-bottom: 40px; color: #666;" data-aos="fade-up" data-aos-delay="100">Bünyemizde havalandırma, iklimlendirme ve mühendislik çözümleri sunduğumuz değerli firmalar.</p>
+
+            <div class="ref-grid">
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/roca.svg" alt="roca">
+                    <h4>roca</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/tei.webp" alt="TEI">
+                    <h4>Tusaş Engine Industries (TEI)</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/etimakine.webp" alt="Eti Makine">
+                    <h4>Eti Makine</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eti.webp" alt="Eti">
+                    <h4>Eti Gıda</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/peymankuruyemis.webp" alt="Peyman Kuruyemiş">
+                    <h4>Peyman Kuruyemiş</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/dsign-logo.webp" alt="Dsign">
+                    <h4>Dsign</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/alphavacilik.webp" alt="Alp Havacılık">
+                    <h4>Alp Havacılık</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/arcelik.webp" alt="Arçelik">
+                    <h4>Arçelik</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/beko.webp" alt="Beko">
+                    <h4>Beko</h4>
+                </div>
+                                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/roplast.svg" alt="Roplast">
+                    <h4>Röplast Plastik</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/anajet.webp" alt="!. Ana Jet ">
+                    <h4>1. Ana Jet Üssü</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/muhariphavakuvvetleri.webp" alt="Muharip Hava Kuvvetleri">
+                    <h4>Muharip Hava Kuvvetleri Komutanlığı</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/BHS_logo.svg" alt="BHS">
+                    <h4>BHS World Makina</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/barrycallebaut.webp" alt="Barry Callebaut">
+                    <h4>Barry Callebaut</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/damlasapanca.webp" alt="Damla Sapanca">
+                    <h4>Damla Sapanca</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/hippo.webp" alt="Hippo">
+                    <h4>Hippo French Tacos</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/social casual.webp" alt="Social Casual">
+                    <h4>Social Coffe</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/antrametal.webp" alt="Antra Metal">
+                    <h4>Antra Metal</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/prolinemakine.webp" alt="Proline Makine">
+                    <h4>Proline Makine</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/gorillburger.webp" alt="Gorill Burger">
+                    <h4>Gorill Burger</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eskisehirbsb.webp" alt="Eskişehir Büyükşehir Belediyesi">
+                    <h4>Eskişehir Büyükşehir Belediyesi</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eskisehirbsb.webp" alt="Eskişehir Büyükşehir Belediyesi">
+                    <h4>Eskişehir Büyükşehir Belediyesi Kentsel Dönüşüm Müdürlüğü</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eskisehirhayvanatbahcesi.webp" alt="Eskişehir Hayvanat Bahçesi">
+                    <h4>Eskişehir Hayvanat Bahçesi</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eskisehirodunpazari.webp" alt="Odunpazarı Belediyesi">
+                    <h4>Eskişehir Odunpazarı Belediyesi</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/dmonte.webp" alt="Dmonte">
+                    <h4>Dmonte Mobilya</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/esogu.webp" alt="ESOGÜ">
+                    <h4>Eskişehir Osmangazi Üniversitesi</h4>
+                </div>
+
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eskimkimya.webp" alt="Eskim Kimya">
+                    <h4>Eskim Kimya</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/baycanelektrik.webp" alt="Baycan Elektrik">
+                    <h4>Baycan Elektrik</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/konakcigayrimenkul.webp" alt="Konakçı Gayrimenkul">
+                    <h4>Konakçı Gayrimenkul</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/Mares.webp" alt="Mares">
+                    <h4>Mares Yapı & İnşaat</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/meser.webp" alt="Meser">
+                    <h4>Meser Mekanik Tesisat Taahhüt</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/birtatfirin.webp" alt="Birtat Fırın">
+                    <h4>Birtat Fırın</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/baf-enginering-logo-2.webp" alt="Baf Engineering">
+                    <h4>Baf Engineering</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/bonacoffe.webp" alt="Bona Coffee">
+                    <h4>Bona Coffee</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/bonfes.webp" alt="Bonfes">
+                    <h4>Bonfes Gıda</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/buselmakina.webp" alt="Busel Makina">
+                    <h4>Busel Makina</h4>
+                </div>
+                <div class="ref-box dark-box" data-aos="fade-up">
+                    <img src="pictures/references/cemre_metal.webp" alt="Cemre Metal">
+                    <h4>Cemre Metal</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/ceselektrik.webp" alt="CES Elektrik">
+                    <h4>CES Elektrik</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/emsajenerator.svg" alt="Emsa Jeneratör">
+                    <h4>Emsa Jeneratör</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/endos_otomasyon.svg" alt="Endos Otomasyon">
+                    <h4>Endos Otomasyon</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/dunyakofte.webp" alt="Dünya Köfte">
+                    <h4>Dünya Köfte</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/seyidoglu.svg" alt="Seyidoğlu Döner">
+                    <h4>Seyidoğlu Döner</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/eguzmuhendislik.webp" alt="E-Güz Mühendislik">
+                    <h4>E-Güz Mühendislik</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/esveracam.webp" alt="Esvera Cam">
+                    <h4>Esvera Cam</h4>
+                </div>
+
+                <div class="ref-box dark-box" data-aos="fade-up">
+                    <img src="pictures/references/fermentoreustorant.webp" alt="Fermente Restoran">
+                    <h4>Fermente Restoran</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/fiba-tek.webp" alt="Fiba-Tek">
+                    <h4>Fiba-Tek Temiz Oda Sistemleri</h4>
+                </div>
+
+                <div class="ref-box dark-box" data-aos="fade-up">
+                    <img src="pictures/references/GulerMetal.svg" alt="Güler Metal">
+                    <h4>Güler Metal</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/kebapname.webp" alt="Kebapname">
+                    <h4>Kebapname</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/koklucemakina.webp" alt="Köklüce Makina">
+                    <h4>Köklüce Makina</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/mistkafe.webp" alt="Mist Kafe">
+                    <h4>Mist Coffe</h4>
+                </div>
+
+                <div class="ref-box dark-box" data-aos="fade-up">
+                    <img src="pictures/references/nhn.webp" alt="NHN">
+                    <h4>NHN Mühendislik</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/onsoz.webp" alt="Önsöz">
+                    <h4>Önsöz Turizm ve Müşavirlik</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/onuriskembe.webp" alt="Onur İşkembe">
+                    <h4>Onur İşkembe</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/ozergrup.webp" alt="Özer Grup">
+                    <h4>Özer Grup</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/palmcoffe.webp" alt="Palm Coffee">
+                    <h4>Palm Coffee</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/panitogida.webp" alt="Panito Gıda">
+                    <h4>Panito Gıda</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/spoung.webp" alt="Spoung">
+                    <h4>Spoung Restoran</h4>
+                </div>
+
+                <div class="ref-box dark-box" data-aos="fade-up">
+                    <img src="pictures/references/questa.webp" alt="Questa">
+                    <h4>Questa Hotel</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/salonhy.webp" alt="Salon HY">
+                    <h4>Salon HY Kuaför</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/semercigolugrup.webp" alt="Semercioğlu Grup">
+                    <h4>Semercioğlu Grup</h4>
+                </div>
+
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/tekmetal.webp" alt="Tekmetal">
+                    <h4>Tek Metal</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/esglobal.webp" alt="Esglobal">
+                    <h4>Esglobal Bim</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/tezkomkompozit.webp" alt="Tezkom Kompozit">
+                    <h4>Tezkom Kompozit</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/umites.webp" alt="Ümites">
+                    <h4>Ümites Çelik</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/wallkerscoffereustorant.webp" alt="Wallkers Coffee & Restaurant">
+                    <h4>Wallkers Coffee & Restaurant</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/yasinpastanesi.webp" alt="Yasin Pastanesi">
+                    <h4>Yasin Pastanesi</h4>
+                </div>
+                <div class="ref-box" data-aos="fade-up">
+                    <img src="pictures/references/yensis_enerji.webp" alt="Yensis Enerji">
+                    <h4>Yensis Enerji</h4>
+                </div>
+
+            </div>
+
+            <!-- Ana Sayfaya Dönüş Butonu -->
+            <div class="text-center" style="margin-top: 50px;" data-aos="fade-up">
+                <a href="index.html" class="all-references-btn">
+                    <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Modern - Ana Sayfa ile Birebir Aynı) -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-duct">
+                <i class="fa-solid fa-wind"></i>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="pictures/logoklasikbeyaz.webp" alt="DFN Mekatronik Logo" class="footer-brand-logo">
+                    <p class="footer-brand-tagline">Endüstriyel Havalandırma ve İklimlendirme Sistemleri</p>
+                    <p>Endüstriyel tesisleriniz için yüksek verimli, modern ve güvenilir mühendislik çözümleri sunuyoruz.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Ana Sayfa</a></li>
+                        <li><a href="index.html#about">Kurumsal</a></li>
+                        <li><a href="index.html#services">Hizmetlerimiz</a></li>
+                        <li><a href="index.html#references">Referanslar</a></li>
+                        <li><a href="index.html#contact">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Hizmetlerimiz</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#services">Havalandırma Sistemleri</a></li>
+                        <li><a href="index.html#services">Toz Toplama Sistemleri</a></li>
+                        <li><a href="index.html#services">İklimlendirme Çözümleri</a></li>
+                        <li><a href="index.html#services">Sac İşleme ve Montaj</a></li>
+                        <li><a href="index.html#services">Daha</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>İletişim Bilgileri</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>75. Yıl mah, Hatay Sk.Numara 10 emko sanayi sitesi, 26250 Odunpazarı/Eskişehir</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+905063107684">0 506 310 76 84</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:turan@dfnmekatronik.com">turan@dfnmekatronik.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 DFN Mekatronik. Tüm hakları saklıdır.</p>
+                <div>
+                    <a href="index.html">Geliştirici:Volkan Tuncer</a>
+                    <a href="#contact">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sabit İletişim Butonları -->
+    <div class="floating-buttons">
+        <a href="tel:+905063107684" class="float-btn phone-btn" title="Hemen Ara">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/905063107684" target="_blank" class="float-btn whatsapp-btn" title="WhatsApp ile İletişime Geç">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- AOS JS Kütüphanesi -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS Animasyonlarını Başlat
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Mobil menü aç/kapa
+        const menuToggle = document.getElementById('menuToggle');
+        const navList = document.getElementById('navList');
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', function() {
+                const isOpen = navList.classList.toggle('nav-open');
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                menuToggle.innerHTML = isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
+            });
+            navList.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navList.classList.remove('nav-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
