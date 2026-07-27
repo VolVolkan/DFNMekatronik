@@ -1085,148 +1085,123 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: row;
-    }
-
-    .about-section {
-        padding: 60px 0;
-        min-height: auto;
-    }
-
-    /* Açılan mobil menünün header tarafından kırpılmasını önler */
+    /* Header & Logo Ayarları */
     header {
         overflow: visible;
     }
 
     .header-content {
-        height: auto;
-        padding: 15px 0;
+        height: 70px; /* Daha kibar header yüksekliği */
+        padding: 0 15px;
+        flex-direction: row;
     }
 
     .logo img {
-        height: 130px;
+        height: 60px; /* Logo boyutunu mobil için dengeledik */
         margin-left: 0;
     }
 
-    /* Masaüstü menüsünü gizle, mobil menüyü aç-kapa butonunu göster */
+    /* Sandviç Menü Butonu (Animasyonlu) */
     .menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        transition: transform 0.3s ease, background 0.3s ease;
+        z-index: 110;
     }
 
+    .menu-toggle:active {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .menu-toggle.is-active {
+        transform: rotate(90deg); /* Çarpıya dönerken oluşan dönme efekti */
+    }
+
+    /* Açılır Menü & Blur Efekti */
     nav ul {
-        display: none;
+        display: flex;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         flex-direction: column;
         align-items: stretch;
-        background-color: #222;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-        padding: 10px 0;
+
+        /* Şeffaf arka plan ve arka plan bulanıklaştırma (Blur) */
+        background-color: rgba(30, 41, 59, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        padding: 0;
+
+        /* Geçiş animasyonları */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
     nav ul.nav-open {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        padding: 10px 0;
     }
 
+    /* Menü Linkleri */
     nav ul li {
         margin-left: 0;
         width: 100%;
         text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
     }
 
     nav ul li a {
         display: block;
-        padding: 14px 20px;
+        padding: 16px 20px;
         width: 100%;
+        font-size: 16px;
+        color: #e2e8f0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: #00bcd4;
     }
 
     nav ul li a::after {
         display: none;
     }
 
-    .slide-content h2 {
-        font-size: 32px;
-    }
-
-    .slide-content p {
-        font-size: 16px;
-    }
-
-    .slider-container {
-        height: 420px;
-    }
-
-    .about-content-box {
-        padding: 30px 25px;
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .ref-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .top-bar-content {
-        justify-content: center;
-        flex-wrap: wrap;
-        text-align: center;
-        gap: 8px 0;
-    }
-
-    .contact-info a {
-        margin-left: 10px;
-        margin-right: 10px;
-        display: inline-block;
-        font-size: 13px;
-    }
-
-    .footer-brand-logo {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Footer içeriğini mobilde ortala */
-    .footer-grid {
-        text-align: center;
-    }
-
-    .footer-brand p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .footer-col h4 {
-        text-align: center;
-    }
-
-    .footer-col h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .footer-links a {
-        display: inline-block;
-    }
-
-    .footer-contact-list li {
-        justify-content: center;
-        text-align: left;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .header-airflow {
-        display: none;
-    }
+    /* Diğer Mobil Düzeltmeler */
+    .about-section { padding: 60px 0; min-height: auto; }
+    .slide-content h2 { font-size: 32px; }
+    .slide-content p { font-size: 16px; }
+    .slider-container { height: 420px; }
+    .about-content-box { padding: 30px 25px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .ref-grid { grid-template-columns: repeat(2, 1fr); }
+    .top-bar-content { justify-content: center; flex-wrap: wrap; text-align: center; gap: 8px 0; }
+    .contact-info a { margin-left: 10px; margin-right: 10px; display: inline-block; font-size: 13px; }
+    .footer-brand-logo { max-width: 300px; margin-left: auto; margin-right: auto; }
+    .footer-grid { text-align: center; }
+    .footer-brand p { margin-left: auto; margin-right: auto; }
+    .footer-col h4 { text-align: center; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-links a { display: inline-block; }
+    .footer-contact-list li { justify-content: center; text-align: left; }
+    .footer-social { justify-content: center; }
+    .header-airflow { display: none; }
 }
 
 @media (max-width: 600px) {

@@ -122,11 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
-
-
-
+// 4. Sayaç (Counter) İşlevi
 document.addEventListener("DOMContentLoaded", function() {
     const counters = document.querySelectorAll('.counter');
     let speed = 150; // Sayım hızı (küçüldükçe hızlanır)
@@ -168,4 +164,36 @@ const observer = new IntersectionObserver((entries, observer) => {
 counters.forEach(counter => {
     observer.observe(counter);
 });
+});
+
+// 5. Animasyonlu Mobil Menü (Yeni Eklenen)
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navList = document.getElementById('navList');
+
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', function() {
+            // Menü açılıp kapanma class'ı
+            const isOpen = navList.classList.toggle('nav-open');
+            // İkona animasyon ekleyen class
+            menuToggle.classList.toggle('is-active');
+
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+            // X ve Bars geçişi
+            menuToggle.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark"></i>'
+            : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        // Bir menü linkine tıklanınca mobil menüyü animasyonlu kapat
+        navList.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navList.classList.remove('nav-open');
+                menuToggle.classList.remove('is-active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+    }
 });
