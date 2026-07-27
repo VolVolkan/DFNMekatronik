@@ -162,12 +162,12 @@ header {
 }
 
 .logo img {
-    height: 350px;
+    height: 100px;
     width: auto;
     max-height: none;
     object-fit: contain;
     padding: 0;
-    margin-left: -350px;
+    margin-left: 10px;
 }
 
 nav ul {
