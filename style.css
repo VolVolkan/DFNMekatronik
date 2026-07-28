@@ -233,53 +233,64 @@ nav ul li a:hover::after {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transform: scale(1.15);
+    transition: opacity 1.2s ease-in-out, transform 6s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .slide::after {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.75) 100%);
 }
 
 .slide.active {
     opacity: 1;
+    transform: scale(1);
 }
 
+/* İçerik kutusu ortada sabit genişlikte tutulur, oklara/kenarlara taşmaz */
 .slide-content {
     position: relative;
     z-index: 1;
     text-align: center;
     color: #fff;
-    padding: 0 20px;
+    padding: 30px 90px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0) 100%);
+    border-radius: 20px;
 }
 
 .slide-content h2 {
     font-size: 48px;
     margin-bottom: 15px;
     opacity: 0;
-    transform: translateY(30px);
-    transition: transform 0.8s ease, opacity 0.8s ease;
-    transition-delay: 0.3s;
+    transform: translate3d(-40px, 15px, 0);
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.9), 0 4px 18px rgba(0,0,0,0.85), 0 0 30px rgba(0,0,0,0.5);
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
+    transition-delay: 0.35s;
 }
 
 .slide-content p {
     font-size: 20px;
-    color: #e0e0e0;
+    color: #f2fdff;
     opacity: 0;
-    transform: translateY(20px);
-    transition: transform 0.8s ease, opacity 0.8s ease;
+    transform: translate3d(40px, 10px, 0);
+    text-shadow: 0 1px 2px rgba(0,0,0,1), 0 2px 6px rgba(0,0,0,0.95), 0 4px 16px rgba(0,0,0,0.8);
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
     transition-delay: 0.6s;
 }
 
 .slide.active .slide-content h2,
 .slide.active .slide-content p {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
 }
 
 .floating-wind {
@@ -406,6 +417,10 @@ nav ul li a:hover::after {
 
     .slider-dot.active {
         width: 20px;
+    }
+
+    .slide-content {
+        padding: 20px 55px;
     }
 }
 
