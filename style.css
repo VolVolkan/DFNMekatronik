@@ -1509,3 +1509,48 @@ footer {
     0%, 100% { filter: drop-shadow(0 0 2px rgba(0,188,212,0.4)); }
     50%      { filter: drop-shadow(0 0 8px rgba(0,188,212,0.85)); }
 }
+
+
+
+/* Footer'daki Site Geliştirici Linki Görünümü */
+.sitegelistirici {
+    color: #00FFFF !important; /* Mavi/Cyan rengi garantiye almak için !important ekledim */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    animation: cyanPulse 1.5s infinite; /* Animasyon sürekli çalışsın */
+}
+
+/* Alt çizgi efekti */
+.sitegelistirici::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00FFFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.sitegelistirici:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Üzerine gelince neon parlama */
+.sitegelistirici:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+}
+
+/* Nabız (Pulse) Animasyonu */
+@keyframes cyanPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); text-shadow: 0 0 15px #00FFFF; }
+    100% { transform: scale(1); }
+}
